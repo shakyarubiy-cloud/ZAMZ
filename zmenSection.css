@@ -1,0 +1,283 @@
+html, body {
+
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: black; /* prevent any horizontal scroll */
+
+
+}
+.wrapper{
+  max-width: 1500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* HEADER */
+.border{
+	position: relative;
+   width: 100%;
+  height: 40px;
+  background-color: rgb(31, 31, 61);
+  border-bottom: 1px solid black;
+ z-index: 1001; /* stays on top */
+   padding-left: 15px;
+   box-sizing: border-box;
+}
+.border h1{
+	position: relative;
+  top: 5px;            /* move it up halfway into header */
+  margin: 0;
+  font-size: 30px;
+  color: beige;
+}
+/* NAVBAR */
+.nav {
+  position: relative;
+ 
+  width: 100%;
+  height: 45px;
+  background-color: rgb(224, 218, 218);
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  border-bottom: 1px solid black;
+  z-index: 1002;
+}
+.nav ul{
+	display: flex;
+	align-items: center;
+	
+}
+.nav ul li{
+	font-size: 20px;
+	list-style: none;
+	padding-left: 75px;
+	margin-top: 0px;
+}
+.nav ul li a{
+	text-decoration: none ;
+	color: rgb(55, 8, 8);
+}
+.nav ul li a:hover{
+	color: white;
+}
+/* Container below header + nav */
+.container {
+  width: 100%;
+  background-color: black;
+  margin-top: 85px; /* header + nav height */
+  height: 730px;
+  margin: 0;
+}
+
+.search {
+  width: 500px;
+  height: 25px;           /* adjust as needed */
+  border: 2px solid black;
+  padding: 5px 10px;
+  border-radius: 20px;
+
+  position:relative;       /* FIXED on screen */
+   bottom: 42px;              /* adjust based on header + border height */
+  left: 800px;            /* distance from right edge */
+  z-index: 1003;          /* above header/nav */
+  background-color: white; /* optional for visibility */
+}
+
+
+
+.head{
+    width: 900px;
+    height: 30px;
+    background-color: grey;
+    margin-top: -39px;
+  
+    margin-left: 300px;
+    display: flex;
+  z-index: 1004;
+}
+.head h2{
+    margin-top: 5px;
+}
+.sort{
+    margin-top: 5px;
+    margin-left: 600px;
+    width: 50px;
+    height: 20px;
+}
+.clothing{
+     margin-top:5px;
+   
+    width: 50px;
+    height: 20px;
+}
+.search1 {
+  width: 600px;
+  height: 25px;           /* adjust as needed */
+  border: 2px solid black;
+ margin-left: 450px;
+ margin-top: 5px;
+ padding: 10px;
+             /* distance from right edge */
+            /* above header/nav */
+  background-color: white;
+   
+}
+.menSlider {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  margin-top: -40px;
+}
+
+.menSlider img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.menSlider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(26, 26, 16, 0.5), rgba(40, 38, 38, 0.971));
+  pointer-events: none;
+}
+.menCollection h2{
+  font-style: italic;
+  color: aliceblue;
+  position: absolute;
+  bottom: 180px;
+  margin: 30px;
+  font-size: 90px;
+}
+
+
+
+.carousel {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slide-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+.slide-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.slide {
+  display: flex;
+  gap: 10px;
+}
+
+.shirts {
+  flex: 0 0 25%; /* show 4 items */
+ 
+}
+.shirts h4{
+  color: whitesmoke;
+}
+
+
+.shirts img {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.left1,
+.right1 {
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10; 
+  margin-top: -180px;
+/* keeps buttons clickable */
+}
+
+.left1:hover,
+.right1:hover {
+  background-color: #444;
+}
+.about{
+	text-align: center;
+	color: white;
+
+	
+}
+
+
+.footer{
+	background-color: whitesmoke;
+	width: 100%;
+	height: 500px;
+	border-top: 5px solid #3D2B1F;
+	justify-items: center;
+  margin-top: -1000px;
+	
+}
+.help{
+	gap: 10px;
+	display: flex;
+	justify-content: left;
+}
+.help img{
+	width: 20px;
+	height: 20px;
+	margin-left: 30px;
+	margin-top: 20px;
+	padding: 5px;
+	position: relative;
+	top:10px;
+}
+.help p{
+	margin-left: 60px;
+	margin-top: -1px;
+	font-style: italic;
+	font-size: 14px;
+}
+.term1{
+	display: flex;
+	gap: 10px;
+}
+.terms{
+	margin: 10px;
+	margin-left: 60px;
+}
+	hr {
+  border:none;           /* remove default border */
+  height: 2px;            /* thickness of line */
+  background-color: black; /* color of line */
+  width: 80%;             /* length of line */
+  margin: 20px auto;  
+  opacity: 40%;    /* spacing and centering */
+}
+.icons img{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	left: 650px;
+	margin: 10px;
+}
+.body img{
+	width: 100px;
+	height: 110px;
+	border-radius: 25px;
+	padding:15px;
+
+.pt1{
+	display: flex;
+}
