@@ -3,98 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="zmenSection.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-		
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-	<div class="wrapper">
-  
-			<div class="header">
-				
-			</div>
-			<div class="container">
-			
-			
+ <div class="contact">
+    
 			<div class="nav">
-				 <div class="border"><h1><a style="text-decoration: none;" href="index.html">ZamZ</a></h1></div>
+                <div class="border"><h1><a style="text-decoration: none;" href="index.html">ZamZ</a></h1></div>
 				<ul class="nav2">
-					<li><a href="">Men</a></li>
+					<li><a href="zmenSection.html">Men</a></li>
 					<li><a href="zwomenSection.html">Women</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="">Contact</a></li>
 					<li><a href="index.html" style="color: darkred;">Sale</a></li>
 				</ul>
 				<div class="func">
-				<i class="bi bi-search" id="search"></i>
 						<a href="signup.html" style="text-decoration: none; color: rgb(222, 207, 189);">
     <i class="bi bi-box-arrow-in-left"></i>
 </a>
 				</div>
 			</div>
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you. Fill out the form below and we'll get back to you shortly.</p>
+<div class="container">
+    <div class="form">
+        <form>
+            <div class="fullName">
+                <div class="firstName">
+                <label>First Name </label><br>
+                <input type="text" placeholder="First Name">
+               
+                </div>
 
-			<div class="search-wrap">
-  <input class="search" type="text" placeholder="Search for items,brands">
-</div>
-			<div class="banner " style="margin: 0; padding: 0;">
-			
-				</div>
-			</div>
-			
-				<!--
-            <div class="head">
-                <h2>Men's Section</h2>
-                <span class="sort">Sort</span>
-                <span class="clothing">Explore</span>
-            </div>
-            <input class="search1" type="text" placeholder="Search for items,brands">
-		-->
+                <div class="lastName">
+                <label>Last Name    </label><br>
+                    <input type="text" placeholder="Last Name" >
+            
+                </div>
+            </div><br><br>
 
-			<div class="menSlider">
-				<img src="images/men.png" style="object-fit: cover; object-position: 50% 12%;">
-			</div>
-			<div class="menCollection">
-				<h2>Men's Collection</span></h2>
-			</div>
-				
-<h2 class="category">Men's <span style="color: red;">Topwear</span></h2>
-            <div class="carousel">
-  <button class="left1">&#10094;</button>
+                <label>Email</label><br>
+                    <input type="email" placeholder="eg:abc@gmail.com" class="field">
+                <br><br>
 
-  <div class="slide-container">
-    <div class="slide">
-      <div class="shirts"><img src="images/lower1.png"><h4>ZamZ Straight Joggers</h4><p class="capsule">Rs.1850</span></div>
-      <div class="shirts"><img src="images/lower2.png"><h4>ZamZ Balloon Jeans </h4><p class="capsule">Rs.1850</p></div>
-      <div class="shirts"><img src="images/lower6.png"><h4>ZamZ Tight Jeans</h4><p class="capsule">Rs.1850</p></div>
-       <div class="shirts"><img src="images/lower4.png"><h4>ZamZ Cargo Pants </h4><p class="capsule">Rs.2050</p></div>
-        <div class="shirts"><img src="images/lower5.png"><h4>ZamZ Shorts</h4><p class="capsule">Rs.1850</p></div>
-         <div class="shirts"><img src="images/lower3.png"><h4>ZamZ Sweatpants</h4><p class="capsule">Rs.1850</p></div>
-      
+                <label>
+                    Subject </label><br>
+                    <select class="field" >
+                        <option value="">Reasons</option>
+                        <option value="General">General Query</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="Suggestions">Suggestions</option>
+                    </select>
+               <br><br>
+
+                <label>
+                    Message  </label><br>
+                    <textarea placeholder="Your thoughts.." ></textarea>
+               <br><br>
+
+                <button type="submit" class="fieldBtn">SEND MESSAGE</button>
+            
+        </form>
+        </div>
+
+    
+
+    <div class="cta">
+        <div class="box">
+                
+            <p><b><i class="bi bi-geo-alt"></i>Visit Us</b><br>
+            Labim Mall, 3th Floor<br>
+              Lalitpur, Nepal</p>
+        </div>
+
+        <div class="box">
+
+            <p><b><i class="bi bi-envelope-at"></i>Email us</b><br>
+            zamz@gmail.com</p>
+        </div>
+
+        <div class="box">
+
+            <p><b><i class="bi bi-telephone"></i>Call Us</b><br>
+            +977-9809898987,+01-5567676</p>
+        </div>
+
+        <div class="box">
+
+            <p><b><i class="bi bi-clock-history"></i>Opening Hours</b><br>
+           Mon-Fri, 10am-8pm</p>
+        </div>
     </div>
-  </div>
-
-  <button class="right1">&#10095;</button>
-</div>
-
-<h2 class="category">Men's <span style="color: red;">Bottomwear</span></h2>
- <div class="carousel">
-  <button class="left1">&#10094;</button>
-  
-  <div class="slide-container">
-    <div class="slide">
-      <div class="shirts"><img src="images/f1.1.png" ><h4>ZamZ Hoodie</h4><p class="capsule">Rs.1850</p></div>
-      <div class="shirts"><img src="images/f2.2.png"><h4>ZamZ Zipped Hoodie</h4><p class="capsule">Rs.1850</p></div>
-      <div class="shirts"><img src="images/f3.3.jpg"><h4>ZamZ Windbreaker Jacket </h4><p class="capsule">Rs.1850</p></div>
-       <div class="shirts"><img src="images/f4.4.jpg"><h4>ZamZ Polo Tshirts</h4><p class="capsule">Rs.1850</p></div>
-        <div class="shirts"><img src="images/f5.5.png"><h4>ZamZ Half-zip</h4><p class="capsule">Rs.1850</p></div>
-         <div class="shirts"><img src="images/f6.6.png"><h4>ZamZ Jeans Jacket</h4><p class="capsule">Rs.1850</p></div>
-      
     </div>
-  </div>
 
-  <button class="right1">&#10095;</button>
-</div>
-<div class="footerContainer">
+    <div class="footerContainer">
 		<div class="about">
 			<h1><i>About ZamZ</i></h1>
 			<p>At ZamZ, we blend comfort, quality, and style to create clothing that complements every lifestyle.
@@ -164,8 +167,6 @@ Wear confidence. Wear ZamZ®.</p>
 						Sitemap</p>
 			<p>© 2025 ZamZ, All Rights Reserved.</p>
 		</div>
-		</div>
-			<script src="zmen.js"></script>
-			
+ </div>
 </body>
 </html>

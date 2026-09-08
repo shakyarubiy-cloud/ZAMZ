@@ -1,53 +1,105 @@
-
-const images=[
-"images/hoodie.jpg",
-"https://i.pinimg.com/1200x/1d/26/4c/1d264c988391a6b743cfbd299b381170.jpg",
-"https://i.pinimg.com/1200x/f7/d9/1b/f7d91bc473148a463a50b75408579aae.jpg"
+const images = [
+    "images/hero1.jpg",
+    "images/hero2.jpg",
+    "images/hero3.jpg"
 ];
+
 let banner = document.querySelector(".banner");
 let index = 0;
 
 function changeBanner() {
-  banner.style.backgroundImage = `url(${images[index]})`;
-  index = (index + 1) % images.length; // loops back to first image
-}
-changeBanner();
-// Change every 3 seconds
-setInterval(changeBanner, 3000);
+    banner.style.backgroundImage = `url("${images[index]}")`;
+    banner.style.backgroundPosition = "center 30%";
 
+    index = (index + 1) % images.length;
+}
+
+changeBanner();
+
+setInterval(changeBanner, 2000);
 // Select all images inside .men divs
 
+//dots
+const tracks = document.querySelectorAll('.carousel-track, .carousel-track1');
+const dotsContainers = document.querySelectorAll('.carousel-dots');
+
+tracks.forEach((track, trackIndex) => {
+  const dotsContainer = dotsContainers[trackIndex];
+  const items = track.children;
+
+  Array.from(items).forEach((item, i) => {
+    const dot = document.createElement('button');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      item.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll('.dot');
+
+  track.addEventListener('scroll', () => {
+    const trackCenter = track.scrollLeft + track.clientWidth / 2;
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+
+    Array.from(items).forEach((item, i) => {
+      const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+      const distance = Math.abs(itemCenter - trackCenter);
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = i;
+      }
+    });
+
+    dots.forEach(d => d.classList.remove('active'));
+    dots[closestIndex].classList.add('active');
+  });
+});
 // Men hover
 const menItems = document.querySelectorAll(".men img");
+
 const menHoverImages = [
-  "https://i.pinimg.com/736x/b4/98/c5/b498c515bb7761efa701f2107855db05.jpg",
-  "https://i.pinimg.com/1200x/68/4f/52/684f520eab740f5a8f40e414803876bd.jpg",
-  "images/windjacket.jpg",
-  "images/polo1.jpg",
-  "https://i.pinimg.com/1200x/2e/21/a1/2e21a1485d50c6282b79068182371c7b.jpg"
+  "images/f1.1.png",
+  "images/f2.2.png",
+  "images/f3.3.jpg",
+  "images/f4.4.jpg",
+  "images/f5.5.png"
 ];
+
 const menOriginalImages = [];
-menItems.forEach(img => menOriginalImages.push(img.src));
+
+menItems.forEach(img => {
+  menOriginalImages.push(img.src);
+});
 
 menItems.forEach((img, index) => {
+
   img.addEventListener("mouseover", () => {
     img.src = menHoverImages[index];
-    img.style.opacity = "0.7";
+    img.style.opacity = "1";
+    img.style.filter="brightness(60%)";
+    img.style.objectFit="cover";
+    img.style.objectPosition="center"
   });
+
   img.addEventListener("mouseout", () => {
     img.src = menOriginalImages[index];
     img.style.opacity = "1";
+    img.style.filter="brightness(100%)";
   });
+
 });
 
 // Women hover
 const womenItems = document.querySelectorAll(".women img");
 const womenHoverImages = [
-  "https://i.pinimg.com/1200x/3b/4f/ca/3b4fcae34834d5d74a237e89d90faf0c.jpg",
-  "https://i.pinimg.com/1200x/cf/a1/5c/cfa15cb67f27636443c1d78b8571740e.jpg",
-  "https://i.pinimg.com/1200x/a3/0b/94/a30b94e49a90cc5549b1d04f9a8361b6.jpg",
-  "https://i.pinimg.com/1200x/80/34/40/8034403f339e4b34d0e5d50bcbf53990.jpg",
-  "https://i.pinimg.com/1200x/aa/de/6b/aade6b83380b53caa8598396669fb0e1.jpg"
+  "images/g1.1.png",
+  "images/g5.5.jpg",
+  "images/g3.3.jpg",
+  "images/g4.4.jpg",
+  "images/g2.2.png"
 ];
 const womenOriginalImages = [];
 womenItems.forEach(img => womenOriginalImages.push(img.src));
@@ -55,11 +107,13 @@ womenItems.forEach(img => womenOriginalImages.push(img.src));
 womenItems.forEach((img, index) => {
   img.addEventListener("mouseover", () => {
     img.src = womenHoverImages[index];
-    img.style.opacity = "0.7";
+    img.style.opacity = "1";
+   img.style.filter = "brightness(60%)";
   });
   img.addEventListener("mouseout", () => {
     img.src = womenOriginalImages[index];
     img.style.opacity = "1";
+     img.style.filter = "brightness(100%)";
   });
 });
 
@@ -75,7 +129,7 @@ carouseld.forEach(carousel => {
   const leftBtnd = carousel.querySelector(".left1d");
   const rightBtnd = carousel.querySelector(".right1d");
   
-  const scrollAmount = 750; // pixels to scroll per click
+  const scrollAmount = 620; // pixels to scroll per click
 
   rightBtnd.addEventListener("click", () => {
     slideContainerd.scrollLeft += scrollAmount;
@@ -143,3 +197,12 @@ topDiv.addEventListener('mouseleave', () => {
   topDiv.style.color = 'white';
 });
 
+const searchIcon = document.querySelector('.bi-search');
+const searchWrap = document.querySelector('.search-wrap');
+
+searchIcon.addEventListener('click', () => {
+  searchWrap.classList.toggle('active');
+  if (searchWrap.classList.contains('active')) {
+    searchWrap.querySelector('.search').focus();
+  }
+});

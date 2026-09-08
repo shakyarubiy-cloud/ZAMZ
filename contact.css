@@ -1,0 +1,329 @@
+body,html{
+ margin: 0;
+    padding: 0;
+   overflow-x: clip;
+  overscroll-behavior-y: none;
+    background-color:  rgba(245, 240, 230, 0.9);
+}
+.contact{
+    text-align: center;
+   
+}
+.border{
+	position: relative;
+   width: 100%;
+  height: 40px;
+   box-sizing: border-box;
+}
+.border a{
+	position: absolute;      
+    bottom:1px;  
+     right: 1400px;
+  margin: 0;
+  font-size: 30px;
+ color:  rgb(222, 207, 189);
+ padding-left: 25px;
+}
+/* NAVBAR */
+.nav {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  background-color:rgb(47, 12, 12);
+  display: flex;
+  padding: 5px;
+}
+.nav ul{
+    position: absolute;
+    left: 860px;
+	display: flex;
+    flex-direction: row;
+    justify-self: center;
+	
+}
+.nav ul li{
+	font-size: 20px;
+	list-style: none;
+	padding-left: 75px;
+	margin-top: 0px;
+}
+.nav ul li a{
+	text-decoration: none ;
+  display: inline-block;
+	color: rgb(222, 207, 189);
+  transition: transform 0.2 ease;
+}
+.nav ul li a:hover{
+  text-shadow: 0px 0px 2px rgb(51, 6, 6);
+  transform: scale(1.08);
+}
+
+.func{
+    position: absolute;
+    left: 1040px;
+    top: 21px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: 400px;
+  color: rgb(222, 207, 189);
+}
+.func i{
+  font-size: 20px;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+.form {
+    width: 100%;
+    max-width: 590px;
+    background-color: rgba(35, 9, 9, 0.9); /* fixed: was "background-colo" */
+    text-align: left;
+    padding: 40px;
+    border-radius: 10px;
+    font-family: 'Inter', Arial, sans-serif; /* one font family for the whole form */
+    box-sizing: border-box;
+}
+
+.form * {
+    box-sizing: border-box; /* so padding doesn't blow out your fixed widths */
+}
+
+label {
+    color: rgb(24, 22, 20);
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.fullName {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.firstName, .lastName {
+    flex: 1; /* replaces fixed 275px so the row is responsive */
+    min-width: 0;
+}
+
+.firstName input, .lastName input {
+    width: 100%; /* was fixed 275px */
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(188, 174, 174);
+    padding-left: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    color: rgb(24, 22, 20);
+}
+
+.field {
+    width: 100%; /* was fixed 570px */
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: rgb(188, 174, 174);
+    padding-left: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    color: rgb(24, 22, 20);
+}
+
+textarea {
+    width: 100%; /* was fixed 570px */
+    height: 90px; /* slightly taller for usability */
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: rgb(188, 174, 174);
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    color: rgb(24, 22, 20);
+    resize: vertical;
+}
+
+/* Explicit placeholder styling so contrast is intentional, not a browser default */
+input::placeholder,
+textarea::placeholder {
+    color: rgb(90, 78, 78);
+    opacity: 1; /* Firefox lowers opacity by default, this forces full strength */
+}
+
+/* Visible focus states for keyboard/accessibility */
+.firstName input:focus,
+.lastName input:focus,
+.field:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 8, 8, 0.4);
+    background-color: rgb(200, 188, 188);
+}
+
+.fieldBtn {
+    display: block; /* needed for margin auto centering to work */
+    width: 305px;
+    height: 40px; /* was 30px, a bit cramped for click target */
+    border-radius: 50px;
+    border: none;
+    margin: 10px auto 0; /* fixed: was "margin-left: 150px" (fragile) */
+    background-color: rgb(59, 8, 8);
+    color: bisque;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.fieldBtn:hover {
+    background-color: rgb(80, 15, 15);
+}
+
+select.field option {
+    background-color: #3b0808;
+    color: gainsboro;
+}
+
+select.field {
+    color: gray;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+/* Mobile: stack the name fields */
+@media (max-width: 480px) {
+    .fullName {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.cta{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 60px;
+}
+.box{
+    border: none;
+    width: 400px;
+    border-radius: 20px;
+    padding: 10px;
+ background-color: rgb(47, 12, 12);
+    color: rgb(222, 207, 189);
+}
+
+.footerContainer{
+  position: relative;
+  height: 0px;
+
+}
+.about{
+	text-align: center;
+	color: rgb(47, 12, 12);
+  position: absolute;
+ top: 70px;	
+}
+
+.footer{
+	background-color: whitesmoke;
+	width: 100%;
+	height: 500px;
+	border-top: 5px solid #641b0e;
+	justify-items: center;
+  position: absolute;
+ top: 200px
+	
+}
+.help{
+	gap: 10px;
+	display: flex;
+	justify-content: left;
+}
+.help img{
+	width: 20px;
+	height: 20px;
+	margin-left: 30px;
+	margin-top: 20px;
+	padding: 5px;
+	position: relative;
+	top:10px;
+}
+.help p{
+	margin-left: 60px;
+	margin-top: -1px;
+	font-style: italic;
+	font-size: 14px;
+  color: #3D2B1F;
+}
+.term1{
+	display: flex;
+	gap: 10px;
+}
+.terms{
+	margin: 10px;
+	margin-left: 60px;
+}
+.terms p{
+  color: #3D2B1F;
+}
+	hr {
+  border:none;           /* remove default border */
+  height: 2px;            /* thickness of line */
+  background-color: rgb(113, 17, 17); /* color of line */
+  width: 80%;             /* length of line */
+  margin: 20px auto;  
+  opacity: 40%;    /* spacing and centering */
+}
+.icons img{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	left: 650px;
+	margin: 10px;
+}
+.body img{
+	width: 100px;
+	height: 110px;
+	border-radius: 25px;
+	padding:15px;
+
+.pt1{
+	display: flex;
+}
+
+.women{
+	width: 250px;
+	height: 60px;
+	border: 2px solid black;
+	border-radius: 25px;
+	margin-top: 20px;
+	margin-left: 450px;
+	border-color:#3D2B1F ;
+}
+.dis{
+	width: 250px;
+	height: 60px;
+	border: 2px solid black;
+	border-radius: 25px;
+	margin-top: 20px;
+	margin-left: 450px;
+	border-color:#3D2B1F ;
+}
+
+
+.footer p{
+	color: black;
+}

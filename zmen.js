@@ -18,9 +18,21 @@ carousels.forEach(carousel => {
 });
 
 
-const shirts= document.querySelector(".shirts");
-shirts.addEventListener("click", ()=>{
-  window.location="checkout.html";
+const shirts = document.querySelectorAll(".shirts");
+
+shirts.forEach((shirt) => {
+  shirt.addEventListener("click", () => {
+    window.location.href = "checkout.html";
+  });
 });
 
+const searchIcon = document.querySelector('.bi-search');
+const searchWrap = document.querySelector('.search-wrap');
+
+searchIcon.addEventListener('click', () => {
+  searchWrap.classList.toggle('active');
+  if (searchWrap.classList.contains('active')) {
+    searchWrap.querySelector('.search').focus();
+  }
+});
 
